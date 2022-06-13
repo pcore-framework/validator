@@ -1,0 +1,19 @@
+{
+    "name": "pcore/validator",
+    "type": "library",
+    "homepage": "https://github.com/pcore-framework/validator",
+    "authors": [
+        {
+            "name": "Magomedcoder",
+            "email": "info@magomedcoder.ru"
+        }
+    ],
+    "require": {
+        "php": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PCore\\Validator\\": "src/"
+        }
+    }
+}
