@@ -261,7 +261,7 @@ class Rules
         if (is_null($value)) {
             return false;
         }
-        if (false === filter_var($value, FILTER_VALIDATE_EMAIL)) {
+        if (filter_var($value, FILTER_VALIDATE_EMAIL) === false) {
             return $this->fail($this->validator->getMessage($key . '.' . __FUNCTION__, $key . 'формат почтового ящика неправильный'));
         }
     }

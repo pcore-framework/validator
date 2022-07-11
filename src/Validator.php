@@ -104,7 +104,7 @@ class Validator
                 $ruleItem = explode(':', $ruleItem, 2);
                 $ruleName = $ruleItem[0];
                 $ruleParams = empty($ruleItem[1]) ? [] : explode(',', $ruleItem[1]);
-                if ($this->rules->$ruleName($key, $value, ...$ruleParams)) {
+                if ($this->rules->{$ruleName}($key, $value, ...$ruleParams)) {
                     $this->valid[$key] = $value;
                 }
             }
