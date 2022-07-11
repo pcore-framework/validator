@@ -62,7 +62,7 @@ class Rules
             return false;
         }
         if (mb_strlen((string)$value, 'utf8') > (int)$max) {
-            return $this->fail($this->validator->getMessage($key . '.' . __FUNCTION__, $key . 'максимальная длина' . $max));
+            return $this->fail($this->validator->getMessage($key . '.' . __FUNCTION__, $key . ' максимальная длина' . $max));
         }
         return true;
     }
@@ -80,7 +80,7 @@ class Rules
             return false;
         }
         if (mb_strlen((string)$value, 'utf8') < (int)$min) {
-            return $this->fail($this->validator->getMessage($key . '.' . __FUNCTION__, $key . 'минимальная длина' . $min));
+            return $this->fail($this->validator->getMessage($key . '.' . __FUNCTION__, $key . ' минимальная длина' . $min));
         }
         return true;
     }
@@ -105,7 +105,7 @@ class Rules
         }
         $length = mb_strlen((string)$value, 'utf8');
         if ($length <= $min || $length >= $max) {
-            return $this->fail($this->validator->getMessage($key . '.' . __FUNCTION__, $key . 'находится в диапазоне' . $min . '-' . $max));
+            return $this->fail($this->validator->getMessage($key . '.' . __FUNCTION__, $key . ' находится в диапазоне' . $min . '-' . $max));
         }
         return true;
     }
@@ -124,7 +124,7 @@ class Rules
         if (is_bool($value) || in_array(strtolower($value), ['on', 'yes', 'true', '1', 'off', 'no', 'false', '0'])) {
             return true;
         }
-        return $this->fail($this->validator->getMessage($key . '.' . __FUNCTION__, $key . 'должно быть логического типа'));
+        return $this->fail($this->validator->getMessage($key . '.' . __FUNCTION__, $key . ' должно быть логического типа'));
     }
 
     /**
@@ -173,7 +173,7 @@ class Rules
     public function confirm($key, $value, $confirm): bool
     {
         if ($value != $this->validator->getData($confirm)) {
-            return $this->fail($this->validator->getMessage($key . '.' . __FUNCTION__, $key . 'поле подтверждения' . $confirm . 'несовместимо'));
+            return $this->fail($this->validator->getMessage($key . '.' . __FUNCTION__, $key . ' поле подтверждения ' . $confirm . ' несовместимо'));
         }
 
         return true;
@@ -262,7 +262,7 @@ class Rules
             return false;
         }
         if (filter_var($value, FILTER_VALIDATE_EMAIL) === false) {
-            return $this->fail($this->validator->getMessage($key . '.' . __FUNCTION__, $key . 'формат почтового ящика неправильный'));
+            return $this->fail($this->validator->getMessage($key . '.' . __FUNCTION__, $key . ' формат почтового ящика неправильный'));
         }
     }
 
