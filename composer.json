@@ -1,7 +1,15 @@
 {
     "name": "pcore/validator",
+    "description": "The validator component for PCore",
     "type": "library",
     "license": "MIT",
+    "keywords": [
+        "php",
+        "pcore",
+        "pcore-framework",
+        "framework",
+        "pcore-component"
+    ],
     "homepage": "https://github.com/pcore-framework/validator",
     "authors": [
         {
