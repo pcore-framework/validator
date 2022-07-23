@@ -62,7 +62,7 @@ class Rules
             return false;
         }
         if (mb_strlen((string)$value, 'utf8') > (int)$max) {
-            return $this->fail($this->validator->getMessage($key . '.' . __FUNCTION__, $key . ' максимальная длина' . $max));
+            return $this->fail($this->validator->getMessage($key . '.' . __FUNCTION__, $key . ' максимальная длина ' . $max));
         }
         return true;
     }
@@ -80,7 +80,7 @@ class Rules
             return false;
         }
         if (mb_strlen((string)$value, 'utf8') < (int)$min) {
-            return $this->fail($this->validator->getMessage($key . '.' . __FUNCTION__, $key . ' минимальная длина' . $min));
+            return $this->fail($this->validator->getMessage($key . '.' . __FUNCTION__, $key . ' минимальная длина ' . $min));
         }
         return true;
     }
@@ -105,7 +105,7 @@ class Rules
         }
         $length = mb_strlen((string)$value, 'utf8');
         if ($length <= $min || $length >= $max) {
-            return $this->fail($this->validator->getMessage($key . '.' . __FUNCTION__, $key . ' находится в диапазоне' . $min . '-' . $max));
+            return $this->fail($this->validator->getMessage($key . '.' . __FUNCTION__, $key . ' находится в диапазоне ' . $min . '-' . $max));
         }
         return true;
     }

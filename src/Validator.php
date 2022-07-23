@@ -57,12 +57,12 @@ class Validator
 
     /**
      * @param $key
-     * @param string $default
-     * @return string|null
+     * @param string $message
+     * @return array
      */
-    public function getMessage($key, $default = 'Проверка не удалась')
+    public function getMessage($key, $message = 'Проверка не удалась'): array
     {
-        return $this->message[$key] ?? $default;
+        return ['field' => $key, 'message' => $this->message[$key] ?? $message];
     }
 
     /**
