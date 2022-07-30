@@ -18,12 +18,12 @@ class Parameter
     protected array $items = [];
 
     /**
-     * @param string $error
+     * @param array $error
      * @return $this
      */
-    public function push(string $error): static
+    public function push(array $error): static
     {
-        $this->items[] = $error;
+        array_push($this->items, $error);
         return $this;
     }
 
